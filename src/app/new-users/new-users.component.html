@@ -1,0 +1,27 @@
+<div class="row ms-1 mt-4">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="pt-3 ms-2">New Users Registrations</p>
+                    <table class="table">
+                       
+                        <tbody>
+                          <tr *ngFor="let user of data; let i = index" >
+                            
+                            <td class="col-3"><img [src]="user.picture" alt="pic"></td>
+                            <td class="fs-12 col-4">{{user.name}} <br>
+                                <div>{{user.country}}</div>
+                            </td>
+                            <td class="text-start"><mat-progress-bar mode="determinate"  [value]="user.progress"></mat-progress-bar></td>
+                            <td class="text-end"><button>more</button></td>
+                          </tr>
+                         
+                         
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

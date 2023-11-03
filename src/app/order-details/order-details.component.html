@@ -1,0 +1,34 @@
+<div class="row ms-1 mt-4">
+    <div class="card">
+        <p class="pt-3 ms-4">Recent Order</p>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Products</th>
+                    <th scope="col">Delivery Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Tracking No#</th>
+                    <th scope="col">Shipping</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let order of data; let i = index" [ngClass]="order.status" >
+                    <th scope="row">{{i + 1}}</th>
+                    <td>{{order.name}}</td>
+                    <td>{{order.product}}</td>
+                    <td>{{order.delivery_date}}</td>
+                    <td>{{order.status}}</td>
+                    <td>{{order.tracking_no}}</td>
+                    <td class="text-center"><img src="../../assets/xmark-solid.svg" alt="action" width="20"></td>
+                  </tr>
+                 
+                 
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

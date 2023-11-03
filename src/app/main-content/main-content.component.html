@@ -1,0 +1,36 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let item of data">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-10 text-black">
+                            <p>{{item.value}}</p>
+                            <div>{{item.header}}</div>
+                            <div>{{item.sub_header}}</div>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="../../assets/award-solid.svg" alt="awad">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <app-order-details></app-order-details>
+        </div>
+        <div class="col-md-4">
+            <app-new-users></app-new-users>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <app-graph-details></app-graph-details>
+    </div>
+</div>
